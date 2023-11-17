@@ -10,10 +10,8 @@ const Counter = () => {
   };
 
   const dispatch = useDispatch();
-  const result = useSelector((state) => state.counter);
-  console.log(result);
-  const toggle = useSelector((state) => state.showCounter);
-  console.log(toggle);
+  const result = useSelector((state) => state.counter.counter);
+  const toggle = useSelector((state) => state.counter.showCounter);
   const incrementHandler = () => {
     dispatch(counterActions.increment());
   };
